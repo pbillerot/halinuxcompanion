@@ -4,8 +4,9 @@ Documentation=https://github.com/muniter/halinuxcompanion
 After=networking.target
 
 [Service]
-WorkingDirectory=~/Dev/halinuxcompanion/venv
-ExecStart=python3 -m halinuxcompanion -c config.json
+User=billerot
+WorkingDirectory=/home/billerot/dev/halinuxcompanion/
+ExecStart=/home/billerot/dev/halinuxcompanion/venv/bin/python3 -m halinuxcompanion -c config.json
 Restart=always
 RestartSec=30
 

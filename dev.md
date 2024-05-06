@@ -20,3 +20,7 @@ def get_current_charge():
      f.close()
      return charge,time 
 ```
+
+- sudo cp /home/billerot/dev/halinuxcompanion/halinuxcompanion/resources/halinuxcompanion.service /etc/systemd/system/halinuxcompanion.service
+- sudo systemctl start halinuxcompanion
+- sudo systemctl enable halinuxcompanion

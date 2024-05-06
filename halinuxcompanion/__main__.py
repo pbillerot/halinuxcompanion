@@ -85,13 +85,13 @@ async def main():
         exit(1)
 
     # Initialize the notifier which implies the webserver and the dbus interface
-    if companion.notifier:
-        # TODO: Session bus is initialized already.
-        # DBus session client to send desktop notifications and listen to signals
-        # Notifier behavior: HA -> Webserver -> dbus ... dbus -> event_handler -> HA
-        notifier = Notifier()
-        await notifier.init(bus, api, server, companion)
-        await server.start()
+    # if companion.notifier:
+    #     # TODO: Session bus is initialized already.
+    #     # DBus session client to send desktop notifications and listen to signals
+    #     # Notifier behavior: HA -> Webserver -> dbus ... dbus -> event_handler -> HA
+    #     notifier = Notifier()
+    #     await notifier.init(bus, api, server, companion)
+    #     await server.start()
 
     interval = companion.refresh_interval
     # Loop forever updating sensors.
