@@ -1,0 +1,74 @@
+{
+  "ha_url": "http://homeassistant.local:8123/",
+  "ha_token": "mysuperlongtoken",
+  "device_id": "computername",
+  "device_name": "whatever you want can be left empty",
+  "manufacturer": "whatever you want can be left empty",
+  "model": "Computer",
+  "computer_ip": "192.168.1.15",
+  "computer_port": 8400,
+  "refresh_interval": 15,
+  "loglevel": "INFO",
+  "sensors": {
+    "cpu": {
+      "enabled": true,
+      "name": "CPU"
+    },
+    "memory": {
+      "enabled": true,
+      "name": "Memory Load"
+    },
+    "uptime": {
+      "enabled": true,
+      "name": "Uptime"
+    },
+    "status": {
+      "enabled": true,
+      "name": "Status"
+    },
+    "battery_level": {
+      "enabled": true,
+      "name": "Battery Level"
+    },
+    "battery_state": {
+      "enabled": true,
+      "name": "Battery State"
+    },
+    "camera_state": {
+      "enabled": true,
+      "name": "Camera State"
+    }
+  },
+  "services": {
+    "notifications": {
+      "enabled": true,
+      "url_program": "xdg-open",
+      "commands": {
+        "command_suspend": {
+          "name": "Suspend",
+          "command": ["systemctl", "suspend"]
+        },
+        "command_poweroff": {
+          "name": "Power off",
+          "command": ["systemctl", "poweroff"]
+        },
+        "command_reboot": {
+          "name": "Reboot",
+          "command": ["systemctl", "reboot"]
+        },
+        "command_hibernate": {
+          "name": "Hibernate",
+          "command": ["systemctl", "hibernate"]
+        },
+        "command_open_ha": {
+          "name": "Open Home Assistant",
+          "command": ["xdg-open", "http://homeassistant.local:8123/"]
+        },
+        "command_open_spotify": {
+          "name": "Open Spotify Flatpak",
+          "command": ["flatpak", "run", "com.spotify.Client"]
+        }
+      }
+    }
+  }
+}
